@@ -1,0 +1,12 @@
+{
+  "name": "summer-trip-app",
+  "version": "1.0.0",
+  "description": "AI Summer Vacation Planner",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@google/genai": "^0.1.1"
+  }
+}
