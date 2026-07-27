@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vercel dev"
   },
- "dependencies": {
-    "@google/genai": "latest"
+  "dependencies": {
+    "@google/genai": "^0.1.1"
   }
 }
