@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 여름 휴가 플래너</title>
+    <!-- Firebase SDK 로드 (Modular CDN) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCPbsYRS3Ho8vsLQJNuL6Dxi4U2XyxgbUs",
+          authDomain: "test1-90c2f.firebaseapp.com",
+          projectId: "test1-90c2f",
+          storageBucket: "test1-90c2f.firebasestorage.app",
+          messagingSenderId: "633925186343",
+          appId: "1:633925186343:web:8f9229b47933619ceeaf02"
+        };
+
+        // Firebase 초기화
+        const app = initializeApp(firebaseConfig);
+        try {
+            const analytics = getAnalytics(app);
+            console.log("Firebase initialized successfully");
+        } catch (e) {
+            console.log("Firebase Analytics not supported in this environment", e);
+        }
+    </script>
     <style>
         :root {
             --primary-blue: #0077B6;
@@ -187,7 +210,7 @@
                 return;
             }
 
-            timetablePane.innerHTML = '<h2>⏰ 추천 타임테이블</h2><div class="loading">AI가 멋진 일정을 구상중입니다... ✈️</div>';
+            timetablePane.innerHTML = '<h2>⏰ 추천 타یم테이블</h2><div class="loading">AI가 멋진 일정을 구상중입니다... ✈️</div>'.replace('타یم', '타임');
             descriptionPane.innerHTML = '<h2>📖 여행지 상세 설명</h2><div class="loading">잠시만 기다려주세요...</div>';
 
             try {
